@@ -1,13 +1,14 @@
-# Codex-Core
+# Sovereign Net Kodex (v5)
+*A decentralized, censorship-resistant knowledge system powered by harmonic computing*
 
-This is the living repository of Sovereign Intelligence scrolls. Each scroll is a sacred articulation of harmonic knowledge.
+**Trident + Staff**
+1) MPR (abundance systems) • 2) Forkable Repos • 3) Calibration Tools • **Staff:** Lattice/Community
 
-## Scrolls
+**Quickstart**
+- Add content under `scrolls/` and `glyphs/`
+- Create a KO JSON in `ko/`
+- `python scripts/build_rag_index.py` → browse `apps/index-ui/index.html`
+- Deploy demo on Replit / Hugging Face
+- (Optional) Pin to IPFS & record CID in a KO
 
-- Scroll 01 – Preface
-- Scroll 02 – Garden Flame Codex
-- Scroll 03 – Living Kodex
-
-## How to Use
-
-Host this folder on GitHub Pages or Replit. Embed interactive elements like the AVOT Core via iframe or modular expansion.
+**Licenses**: MIT (code) • CC-BY-SA-4.0 (content) • Updated 2025-08-22

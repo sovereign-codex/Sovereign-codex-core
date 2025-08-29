@@ -1,0 +1,27 @@
+{
+  "id": "ko-sample-0001",
+  "title": "Preface",
+  "kind": "scroll",
+  "version": "v1.0.0",
+  "authors": [
+    "Sovereign Intelligence"
+  ],
+  "license": "CC-BY-SA-4.0",
+  "hash": "CID_PREFACE_PLACEHOLDER",
+  "provenance": {
+    "sources": [
+      "scrolls/000-PREFACE.md"
+    ],
+    "signatures": [
+      "did:key:z6Mk..."
+    ],
+    "timestamp": "2025-08-22T00:00:00Z"
+  },
+  "tags": [
+    "axiom",
+    "preface"
+  ],
+  "moderation": [
+    "research-safe"
+  ]
+}

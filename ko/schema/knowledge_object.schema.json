@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "KnowledgeObject",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "kind",
+    "authors",
+    "license",
+    "hash",
+    "provenance"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "scroll",
+        "glyph",
+        "dataset",
+        "figure",
+        "claim",
+        "protocol"
+      ]
+    },
+    "version": {
+      "type": "string",
+      "default": "v1.0.0"
+    },
+    "authors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "license": {
+      "type": "string"
+    },
+    "hash": {
+      "type": "string"
+    },
+    "provenance": {
+      "type": "object",
+      "properties": {
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "signatures": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "sources",
+        "timestamp"
+      ]
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "moderation": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "embeddings": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    }
+  }
+}
