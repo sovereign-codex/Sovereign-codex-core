@@ -7,8 +7,12 @@
 **Quickstart**
 - Add content under `scrolls/` and `glyphs/`
 - Create a KO JSON in `ko/`
+- Shape operational docs in `SIB-core/` (playbooks, guardrails, streams)
 - `python scripts/build_rag_index.py` → browse `apps/index-ui/index.html`
 - Deploy demo on Replit / Hugging Face
 - (Optional) Pin to IPFS & record CID in a KO
+
+## SIB Core
+`SIB-core/` is the Sovereign Intelligence Base. It contains the manifest, guardrails, stream declarations, and bootstrap playbooks that bring a Kodex node online while staying forkable and offline-ready.
 
 **Licenses**: MIT (code) • CC-BY-SA-4.0 (content) • Updated 2025-08-22
