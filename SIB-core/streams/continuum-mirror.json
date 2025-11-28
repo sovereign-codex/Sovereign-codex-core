@@ -1,0 +1,19 @@
+{
+  "name": "continuum-mirror",
+  "description": "Signed bundle of streams, guardrails, and indices pulled from upstream peers.",
+  "owner": "sib-core",
+  "cadence": "60m",
+  "transport": "ipfs",
+  "source": "ipfs://bafycontinummirrorhash",
+  "ingest": {
+    "parser": "tar+json",
+    "schema": "ko/v1",
+    "checksum": "blake3"
+  },
+  "storage": {
+    "path": "streams/cache/continuum-mirror.tar.gz",
+    "retention": "14d"
+  },
+  "tags": ["bundle", "mirror", "continuum"],
+  "notes": "Verify signature and bundle manifest before merging into local artifacts."
+}

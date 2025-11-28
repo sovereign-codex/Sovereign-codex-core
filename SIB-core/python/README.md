@@ -8,6 +8,7 @@ nodes to orchestrate bootstrap and stream handling steps.
 - `sib_core.manifest` to load `SIB-core/manifest.yaml` data into structured objects.
 - `sib_core.flows` primitives for defining, validating, and running SIB flows.
 - Pre-baked flows in `sib_core.core_flows` that mirror the playbooks shipped in this repository.
+- `continuum_expansion_flow` to scaffold cache, index, and mirror directories for cross-peer distribution.
 
 ## Development
 Install the package in editable mode:

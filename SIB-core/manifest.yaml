@@ -1,10 +1,10 @@
 name: SIB Core
-version: 0.1.0
-status: initializing
+version: 0.2.0
+status: continuum-expansion
 stewards:
   - name: Sovereign Net Core Team
     contact: core@sovereign.net
-last_updated: 2025-09-03
+last_updated: 2025-09-04
 description: >
   Baseline operating artifacts for the Sovereign Intelligence Base. Use this manifest
   to track compatible playbooks, protocol revisions, and stream definitions.
@@ -14,7 +14,10 @@ compatibility:
 artifacts:
   playbooks:
     - playbooks/00-bootstrap.md
+    - playbooks/01-continuum-expansion.md
   protocols:
     - protocols/guardrails.md
   streams:
     - streams/example-stream.json
+    - streams/continuum-heartbeat.json
+    - streams/continuum-mirror.json
