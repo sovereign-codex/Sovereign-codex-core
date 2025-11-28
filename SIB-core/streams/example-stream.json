@@ -1,0 +1,19 @@
+{
+  "name": "signal-lighthouse",
+  "description": "Daily distilled threat + opportunity signals from trusted curators.",
+  "owner": "sib-core",
+  "cadence": "24h",
+  "transport": "https",
+  "source": "https://example.net/feeds/signal-lighthouse.json",
+  "ingest": {
+    "parser": "jsonlines",
+    "schema": "ko/v1",
+    "checksum": "sha256"
+  },
+  "storage": {
+    "path": "streams/cache/signal-lighthouse.jsonl",
+    "retention": "30d"
+  },
+  "tags": ["curated", "signals", "trusted"],
+  "notes": "Use guardrails.md validation steps before accepting into scrolls."
+}

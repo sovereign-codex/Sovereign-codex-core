@@ -2,7 +2,7 @@
 import os, json, glob, hashlib
 ROOT = os.path.dirname(os.path.dirname(__file__))
 docs = []
-for p in ["scrolls","ko/samples"]:
+for p in ["scrolls", "ko/samples", "SIB-core"]:
     for fp in glob.glob(os.path.join(ROOT,p,"**","*.*"), recursive=True):
         if fp.endswith((".md",".txt",".json")):
             text = open(fp,"r",encoding="utf-8").read()

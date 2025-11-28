@@ -1,0 +1,20 @@
+name: SIB Core
+version: 0.1.0
+status: initializing
+stewards:
+  - name: Sovereign Net Core Team
+    contact: core@sovereign.net
+last_updated: 2025-09-03
+description: >
+  Baseline operating artifacts for the Sovereign Intelligence Base. Use this manifest
+  to track compatible playbooks, protocol revisions, and stream definitions.
+compatibility:
+  scrolls: ["scroll-01", "scroll-02", "scroll-03"]
+  schemas: ["ko/v1"]
+artifacts:
+  playbooks:
+    - playbooks/00-bootstrap.md
+  protocols:
+    - protocols/guardrails.md
+  streams:
+    - streams/example-stream.json
