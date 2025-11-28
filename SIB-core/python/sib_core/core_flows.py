@@ -117,3 +117,77 @@ def stream_intake_flow(stream_name: str, guardrails: Iterable[str] | None = None
         steps=steps,
         guardrails=flow_guardrails,
     )
+
+
+def continuum_expansion_flow(
+    base_dir: Path = Path("."), streams: Iterable[str] | None = None
+) -> Flow:
+    """Prepare cache, index, and mirror scaffolding for continuum expansion."""
+
+    flow_guardrails = ["signed-bundles", "redundant-mirrors", "heartbeat-visible"]
+    stream_names = list(streams) if streams else []
+
+    def record_guardrails(ctx: FlowContext) -> None:
+        _echo_guardrails(flow_guardrails, ctx)
+
+    def ensure_cache(ctx: FlowContext) -> None:
+        _ensure_path_exists(base_dir / "streams" / "cache", ctx)
+
+    def ensure_indices(ctx: FlowContext) -> None:
+        _ensure_path_exists(base_dir / "indices", ctx)
+
+    def ensure_mirrors(ctx: FlowContext) -> None:
+        _ensure_path_exists(base_dir / "mirrors", ctx)
+
+    def provision_stream_placeholders(ctx: FlowContext) -> None:
+        cache_dir = base_dir / "streams" / "cache"
+        for stream_name in stream_names:
+            placeholder = cache_dir / f"{stream_name}.placeholder"
+            if not placeholder.exists():
+                placeholder.touch()
+                ctx.record(f"provisioned:{placeholder}")
+            else:
+                ctx.record(f"exists:{placeholder}")
+
+    def mark_ready(ctx: FlowContext) -> None:
+        ctx.record("continuum-ready")
+
+    steps = [
+        FlowStep(
+            name="record-guardrails",
+            description="Document guardrails in the context log",
+            action=record_guardrails,
+        ),
+        FlowStep(
+            name="ensure-cache",
+            description="Create stream cache directory",
+            action=ensure_cache,
+        ),
+        FlowStep(
+            name="ensure-indices",
+            description="Create index directory",
+            action=ensure_indices,
+        ),
+        FlowStep(
+            name="ensure-mirrors",
+            description="Create mirror directory",
+            action=ensure_mirrors,
+        ),
+        FlowStep(
+            name="provision-streams",
+            description="Pre-create placeholders for continuum streams",
+            action=provision_stream_placeholders,
+        ),
+        FlowStep(
+            name="mark-ready",
+            description="Signal readiness for continuum expansion",
+            action=mark_ready,
+        ),
+    ]
+
+    return Flow(
+        name="continuum-expansion",
+        purpose="Provision directories and placeholders for cross-peer expansion",
+        steps=steps,
+        guardrails=flow_guardrails,
+    )

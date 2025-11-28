@@ -1,0 +1,24 @@
+{
+  "name": "continuum-heartbeat",
+  "description": "Lightweight heartbeat payload broadcast to trusted peers.",
+  "owner": "sib-core",
+  "cadence": "15m",
+  "transport": "https",
+  "source": "https://mirror.sib.local/heartbeats/continuum.json",
+  "ingest": {
+    "parser": "json",
+    "schema": "ko/v1",
+    "checksum": "sha256"
+  },
+  "storage": {
+    "path": "streams/cache/continuum-heartbeat.json",
+    "retention": "7d"
+  },
+  "payload": {
+    "fields": ["node_id", "version", "last_updated", "index_hash", "bundle_signature"],
+    "format": "application/json",
+    "compression": "none"
+  },
+  "tags": ["heartbeat", "continuum", "telemetry"],
+  "notes": "Emit after each index rebuild and bundle publication."
+}

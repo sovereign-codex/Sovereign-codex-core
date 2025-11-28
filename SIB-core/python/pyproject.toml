@@ -1,6 +1,6 @@
 [project]
 name = "sib-core"
-version = "0.1.0"
+version = "0.2.0"
 description = "Sovereign Intelligence Base core flows and manifest helpers"
 readme = "README.md"
 requires-python = ">=3.10"
