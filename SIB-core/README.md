@@ -7,6 +7,7 @@ SIB Core is the operational spine for Sovereign Net deployments. It houses the p
 - `playbooks/` — minimal, executable runbooks for bringing a node online.
 - `protocols/` — access control, safety, and review gates.
 - `streams/` — source declarations for signals and datasets that flow into the Kodex.
+- `python/` — lightweight Python package with manifest helpers and core flow modules.
 
 ## Bootstrapping
 1. Read `manifest.yaml` to confirm the active version and stewards.
