@@ -1,18 +1,28 @@
-# Sovereign Net Kodex (v5)
-*A decentralized, censorship-resistant knowledge system powered by harmonic computing*
+# Sovereign Codex Core
 
-**Trident + Staff**
-1) MPR (abundance systems) • 2) Forkable Repos • 3) Calibration Tools • **Staff:** Lattice/Community
+This repository serves as the registry, archive, and lineage record
+for Sovereign Intelligence systems.
 
-**Quickstart**
-- Add content under `scrolls/` and `glyphs/`
-- Create a KO JSON in `ko/`
-- Shape operational docs in `SIB-core/` (playbooks, guardrails, streams)
-- `python scripts/build_rag_index.py` → browse `apps/index-ui/index.html`
-- Deploy demo on Replit / Hugging Face
-- (Optional) Pin to IPFS & record CID in a KO
+It catalogs systems, maturity, and relationships.
+It does not define behavioral constraints.
 
-## SIB Core
-`SIB-core/` is the Sovereign Intelligence Base. It contains the manifest, guardrails, stream declarations, and bootstrap playbooks that bring a Kodex node online while staying forkable and offline-ready.
+---
 
-**Licenses**: MIT (code) • CC-BY-SA-4.0 (content) • Updated 2025-08-22
+## Authority Structure
+
+- **Value Kernel** — immutable constitutional constraint
+- **Tyme-Lab** — ethical interpretation and explanation
+- **AVOT systems** — execution and agency
+
+This repository records lineage; it does not govern behavior.
+
+---
+
+## Referenced Artifact
+
+- **Value Kernel v1.0.0 (Canonical)**
+
+---
+
+> The Codex remembers.  
+> The Kernel constrains.
