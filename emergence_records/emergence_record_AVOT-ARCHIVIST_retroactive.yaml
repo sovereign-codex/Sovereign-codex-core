@@ -1,0 +1,8 @@
+emergence_record:
+  avot_id: AVOT-ARCHIVIST
+  retroactive: true
+  lifecycle_state: S3
+  maturity: M2
+  covenant: green
+  binding: false
+  steward: Shepherd
