@@ -1,0 +1,19 @@
+registry:
+  status: canonical
+  governed_by: kernel.md
+
+systems:
+  sovereign-codex-core:
+    type: repository
+    maturity: M3
+    covenant: green
+
+  avot-engine-core:
+    type: repository
+    maturity: M3
+    covenant: green
+
+  tyme-lab:
+    type: repository
+    maturity: M3
+    covenant: green
