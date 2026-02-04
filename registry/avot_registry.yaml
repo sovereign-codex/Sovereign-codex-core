@@ -1,0 +1,6 @@
+avot_registry:
+  status: canonical
+  governed_by:
+    - kernel.md
+    - TYME_Charter_of_Emergence
+  avots: {}
