@@ -4,3 +4,8 @@ avot_registry:
     - kernel.md
     - TYME_Charter_of_Emergence
   avots: {}
+avots:
+  AVOT-ARCHIVIST:
+    lifecycle_state: S3
+    maturity: M2
+    binding: false
